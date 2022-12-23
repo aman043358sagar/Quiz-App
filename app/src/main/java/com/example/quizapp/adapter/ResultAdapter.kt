@@ -48,7 +48,7 @@ class ResultAdapter :
             
             val question = QuestionList.questionList[position]
             binding.image.setBackgroundResource(question.image)
-            binding.tvQuestion.text = "${position + 1}. ${question.question}"
+            binding.tvQuestion.text = question.question
             for (id in question.options.indices) {
                 val rdbtn = CheckBox(binding.root.context)
                 rdbtn.text = question.options[id]
