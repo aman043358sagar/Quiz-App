@@ -1,22 +1,20 @@
 package com.example.quizapp.adapter
 
-import android.R
 import android.content.res.ColorStateList
 import android.graphics.Color
-import android.util.TypedValue
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.CheckBox
-import android.widget.RadioButton
 import android.widget.RadioGroup
 import androidx.core.content.ContextCompat
 import androidx.core.view.setPadding
 import androidx.recyclerview.widget.RecyclerView
+import com.example.quizapp.R
 import com.example.quizapp.constant.QuestionList
 import com.example.quizapp.databinding.LayoutQuestionBinding
 
 
-class ResultAdapter() :
+class ResultAdapter :
     RecyclerView.Adapter<ResultAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -39,16 +37,17 @@ class ResultAdapter() :
         fun bind(position: Int) {
 
             val colorStateListCorrect = ColorStateList(
-                arrayOf(intArrayOf(R.attr.state_enabled)),
+                arrayOf(intArrayOf(android.R.attr.state_enabled)),
                 intArrayOf(Color.parseColor("#43A047"))
             )
 
             val colorStateListWrong = ColorStateList(
-                arrayOf(intArrayOf(R.attr.state_enabled)),
+                arrayOf(intArrayOf(android.R.attr.state_enabled)),
                 intArrayOf(Color.parseColor("#FB0000"))
             )
             
             val question = QuestionList.questionList[position]
+            binding.image.setBackgroundResource(question.image)
             binding.tvQuestion.text = "${position + 1}. ${question.question}"
             for (id in question.options.indices) {
                 val rdbtn = CheckBox(binding.root.context)
@@ -62,20 +61,20 @@ class ResultAdapter() :
                 rdbtn.isClickable = false
 
                 rdbtn.setBackgroundColor(ContextCompat.getColor(binding.root.context,
-                    com.example.quizapp.R.color.defaultOption))
+                    R.color.defaultOption))
 
                 if (question.correctOption == id + 1) {
                     rdbtn.isChecked = true
                     rdbtn.buttonTintList = colorStateListCorrect
                     rdbtn.setBackgroundColor(ContextCompat.getColor(binding.root.context,
-                        com.example.quizapp.R.color.correct))
+                        R.color.correct))
                 }
 
                 if (question.selectedOption!=-1 && question.selectedOption == id+1 && question.selectedOption!=question.correctOption) {
                     rdbtn.isChecked = true
                     rdbtn.buttonTintList = colorStateListWrong
                     rdbtn.setBackgroundColor(ContextCompat.getColor(binding.root.context,
-                        com.example.quizapp.R.color.wrong))
+                        R.color.wrong))
                 }
 
                 rdbtn.setPadding(30)

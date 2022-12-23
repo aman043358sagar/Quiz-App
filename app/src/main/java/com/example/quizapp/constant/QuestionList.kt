@@ -108,5 +108,11 @@ class QuestionList {
                 image = R.drawable.img10
             )
         )
+
+        fun setDefault(){
+            for (question in questionList){
+                question.selectedOption = -1
+            }
+        }
     }
 }

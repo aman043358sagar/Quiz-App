@@ -41,4 +41,9 @@ class ResultActivity : AppCompatActivity() {
         val percentage = ((correctCounter).toFloat() /questionList.size.toFloat())*100
         return percentage.toInt()
     }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        QuestionList.setDefault()
+    }
 }
