@@ -10,8 +10,12 @@
 
     <color name="question">#FF000000</color>
 
-    <color name="defaultOption">#7FF6F6F6</color>
+    <color name="defaultOption">#B3F6F6F6</color>
     <color name="selectedOption">#23367CFF</color>
 
+    <color name="statusBar">#FFFFFFFF</color>
+
+    <color name="correct">#1A43A047</color>
+    <color name="wrong">#1AFB0000</color>
 
 </resources>

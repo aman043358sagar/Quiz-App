@@ -1,4 +1,4 @@
-package com.example.quizapp.ui
+package com.example.quizapp.fragment
 
 import android.content.res.ColorStateList
 import android.graphics.Color
@@ -42,7 +42,7 @@ class MainFragment : Fragment() {
                 RadioGroup.LayoutParams.MATCH_PARENT,
                 RadioGroup.LayoutParams.MATCH_PARENT
             )
-            params.setMargins(0,50,0,0)
+            params.setMargins(0,40,0,0)
             rdbtn.layoutParams = params
             rdbtn.setBackgroundColor(ContextCompat.getColor(requireContext(),R.color.defaultOption))
             rdbtn.setOnClickListener {
