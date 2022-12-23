@@ -10,5 +10,8 @@
 
     <color name="question">#FFFFFFFF</color>
 
+    <color name="defaultOption">#33F6F6F6</color>
+    <color name="selectedOption">#4C367CFF</color>
+
 
 </resources>
