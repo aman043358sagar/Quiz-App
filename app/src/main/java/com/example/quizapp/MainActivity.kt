@@ -9,6 +9,7 @@ import com.example.quizapp.databinding.ActivityMainBinding
 import com.example.quizapp.databinding.FragmentMainBinding
 import com.example.quizapp.model.Question
 import com.example.quizapp.ui.MainFragment
+import com.example.quizapp.ui.ResultActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -58,8 +59,8 @@ class MainActivity : AppCompatActivity() {
                     .addToBackStack(null)
                     .commit()
             }else{
-                /*startActivity(Intent(this@MainActivity,ResultActivity::class.java))
-                finish()*/
+                startActivity(Intent(this@MainActivity, ResultActivity::class.java))
+                finish()
             }
         }
 

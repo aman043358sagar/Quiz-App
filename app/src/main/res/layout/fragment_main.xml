@@ -27,8 +27,9 @@
             app:layout_constraintTop_toTopOf="parent"/>
 
         <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivQuestion"
             android:layout_width="match_parent"
-            android:src="@drawable/placeholder"
+            tools:src="@drawable/placeholder"
             android:layout_marginTop="10dp"
             android:scaleType="fitXY"
             app:shapeAppearanceOverlay="@style/roundedImageViewRounded"

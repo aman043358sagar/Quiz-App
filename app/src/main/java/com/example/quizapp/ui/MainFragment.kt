@@ -30,12 +30,12 @@ class MainFragment : Fragment() {
         binding = FragmentMainBinding.inflate(inflater, container, false)
         val question = requireArguments().getSerializable("question") as Question
         binding.tvQuestion.text = question.question
+        binding.ivQuestion.setBackgroundResource(question.image)
 
         for (id in question.options.indices) {
             val rdbtn = RadioButton(requireContext())
             rdbtn.id = id
             rdbtn.text = question.options[id]
-            //rdbtn.setTextSize(TypedValue.COMPLEX_UNIT_SP, 16f)
             if (question.selectedOption!=-1 && question.selectedOption == id+1)
                 rdbtn.isChecked = true
             val params = RadioGroup.LayoutParams(
@@ -45,7 +45,6 @@ class MainFragment : Fragment() {
             params.setMargins(0,50,0,0)
             rdbtn.layoutParams = params
             rdbtn.setBackgroundColor(ContextCompat.getColor(requireContext(),R.color.defaultOption))
-            //rdbtn.setBackgroundColor(Color.parseColor("#F6F6F6"))
             rdbtn.setOnClickListener {
                 val questionIndex = QuestionList.questionList.indexOf(question)
                 QuestionList.questionList[questionIndex].selectedOption = id+1
@@ -65,13 +64,6 @@ class MainFragment : Fragment() {
             )
 
             rdbtn.buttonTintList = colorStateList
-
-/*            rdbtn.setOnCheckedChangeListener{ buttonView, isChecked ->
-                if (isChecked)
-                    rdbtn.setBackgroundColor(Color.parseColor("#23367CFF"))
-                else
-                    rdbtn.setBackgroundColor(Color.parseColor("#F6F6F6"))
-            }*/
             rdbtn.setPadding(30)
             binding.radioGroup.addView(rdbtn)
         }
