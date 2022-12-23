@@ -28,7 +28,6 @@ class ResultActivity : AppCompatActivity() {
         binding.btnBack.setOnClickListener {
             onBackPressed()
         }
-
     }
 
     fun resultInPercent(): Int {
