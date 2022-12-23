@@ -21,7 +21,7 @@
             android:background="@color/statusBar"
             android:layout_height="wrap_content"
             android:fitsSystemWindows="true"
-            app:contentScrim="#F9F9F9"
+            app:contentScrim="#0D0D0D"
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
             app:toolbarId="@+id/toolbar">
 
@@ -99,7 +99,7 @@
                     tools:text="75%"
                     android:textSize="31sp"
                     android:textStyle="bold"
-                    android:textColor="#7700AA"
+                    android:textColor="#FF0000"
                     app:layout_constraintStart_toStartOf="@id/outerBlackRing"
                     app:layout_constraintEnd_toEndOf="@id/outerBlackRing"
                     app:layout_constraintTop_toTopOf="@id/outerBlackRing"
@@ -121,7 +121,6 @@
                     />
 
             </androidx.appcompat.widget.Toolbar>
-
         </com.google.android.material.appbar.CollapsingToolbarLayout>
     </com.google.android.material.appbar.AppBarLayout>
 

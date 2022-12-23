@@ -1,10 +1,10 @@
-package com.example.quizapp.ui
+package com.example.quizapp.activity
 
 import android.content.Intent
-import android.graphics.Color
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.quizapp.MainActivity
+import androidx.core.content.ContextCompat
+import com.example.quizapp.R
 import com.example.quizapp.databinding.ActivityStartQuizBinding
 
 class StartQuizActivity : AppCompatActivity() {
@@ -13,7 +13,7 @@ class StartQuizActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityStartQuizBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        window.statusBarColor = Color.WHITE;
+        window.statusBarColor = ContextCompat.getColor(this, R.color.statusBar)
         binding.btnStart.setOnClickListener {
             startActivity(Intent(this@StartQuizActivity, MainActivity::class.java))
         }

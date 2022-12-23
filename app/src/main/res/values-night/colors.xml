@@ -13,5 +13,9 @@
     <color name="defaultOption">#33F6F6F6</color>
     <color name="selectedOption">#4C367CFF</color>
 
+    <color name="statusBar">#FF000000</color>
+
+    <color name="correct">#4D43A047</color>
+    <color name="wrong">#33FB0000</color>
 
 </resources>

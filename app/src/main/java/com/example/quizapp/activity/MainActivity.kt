@@ -1,16 +1,14 @@
-package com.example.quizapp
+package com.example.quizapp.activity
 
 import android.content.Intent
-import android.graphics.Color
-import android.graphics.drawable.GradientDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.core.content.ContextCompat
+import com.example.quizapp.R
 import com.example.quizapp.constant.QuestionList
 import com.example.quizapp.databinding.ActivityMainBinding
-import com.example.quizapp.databinding.FragmentMainBinding
 import com.example.quizapp.model.Question
-import com.example.quizapp.ui.MainFragment
-import com.example.quizapp.ui.ResultActivity
+import com.example.quizapp.fragment.MainFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -21,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        window.statusBarColor = Color.WHITE;
+        window.statusBarColor = ContextCompat.getColor(this, R.color.statusBar)
         questionList = QuestionList.questionList
         if (savedInstanceState == null) {
             supportFragmentManager.beginTransaction()
