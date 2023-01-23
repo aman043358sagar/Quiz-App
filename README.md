@@ -9,12 +9,12 @@ It is a quiz app that contains kotlin question
 
 Start Quiz             |  Start Quiz black
 :-------------------------:|:-------------------------:
-<img src="https://gitlab.com/aman043358sagar/Quiz-App/-/raw/master/Files/start%20quiz.png" width="246" height="438">  |  <img src="https://gitlab.com/aman043358sagar/Quiz-App/-/raw/master/Files/start%20quiz%20black.png" width="246" height="438">
+<img src="https://gitlab.com/aman043358sagar/Quiz-App/-/raw/master-xml/Files/start%20quiz.png" width="246" height="438">  |  <img src="https://gitlab.com/aman043358sagar/Quiz-App/-/raw/master-xml/Files/start%20quiz%20black.png" width="246" height="438">
 
 Quiz             |  Quiz black
 :-------------------------:|:-------------------------:
-<img src="https://gitlab.com/aman043358sagar/Quiz-App/-/raw/master/Files/quiz.png" width="246" height="438">  |  <img src="https://gitlab.com/aman043358sagar/Quiz-App/-/raw/master/Files/quiz%20black.png" width="246" height="438">
+<img src="https://gitlab.com/aman043358sagar/Quiz-App/-/raw/master-xml/Files/quiz.png" width="246" height="438">  |  <img src="https://gitlab.com/aman043358sagar/Quiz-App/-/raw/master-xml/Files/quiz%20black.png" width="246" height="438">
 
 Result             |  Result black
 :-------------------------:|:-------------------------:
-<img src="https://gitlab.com/aman043358sagar/Quiz-App/-/raw/master/Files/result.png" width="246" height="438">  |  <img src="https://gitlab.com/aman043358sagar/Quiz-App/-/raw/master/Files/result%20black.png" width="246" height="438">
+<img src="https://gitlab.com/aman043358sagar/Quiz-App/-/raw/master-xml/Files/result.png" width="246" height="438">  |  <img src="https://gitlab.com/aman043358sagar/Quiz-App/-/raw/master-xml/Files/result%20black.png" width="246" height="438">
