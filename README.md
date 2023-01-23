@@ -9,12 +9,12 @@ It is a quiz app that contains kotlin question
 
 Start Quiz             |  Start Quiz black
 :-------------------------:|:-------------------------:
-<img src="https://gitlab.com/aman043358sagar/Quiz-App/-/blob/master-jetpack-compose/Files/start%20quiz.png" width="246" height="438">  |  <img src="https://gitlab.com/aman043358sagar/Quiz-App/-/blob/master-jetpack-compose/Files/start%20quiz%20black.png" width="246" height="438">
+<img src="https://gitlab.com/aman043358sagar/Quiz-App/-/raw/master-jetpack-compose/Files/start%20quiz.png" width="246" height="438">  |  <img src="https://gitlab.com/aman043358sagar/Quiz-App/-/raw/master-jetpack-compose/Files/start%20quiz%20black.png" width="246" height="438">
 
 Quiz             |  Quiz black
 :-------------------------:|:-------------------------:
-<img src="https://gitlab.com/aman043358sagar/Quiz-App/-/blob/master-jetpack-compose/Files/quiz.png" width="246" height="438">  |  <img src="https://gitlab.com/aman043358sagar/Quiz-App/-/blob/master-jetpack-compose/Files/quiz%20black.png" width="246" height="438">
+<img src="https://gitlab.com/aman043358sagar/Quiz-App/-/raw/master-jetpack-compose/Files/quiz.png" width="246" height="438">  |  <img src="https://gitlab.com/aman043358sagar/Quiz-App/-/raw/master-jetpack-compose/Files/quiz%20black.png" width="246" height="438">
 
 Result             |  Result black
 :-------------------------:|:-------------------------:
-<img src="https://gitlab.com/aman043358sagar/Quiz-App/-/blob/master-jetpack-compose/Files/result.png" width="246" height="438">  |  <img src="https://gitlab.com/aman043358sagar/Quiz-App/-/blob/master-jetpack-compose/Files/result%20black.png" width="246" height="438">
+<img src="https://gitlab.com/aman043358sagar/Quiz-App/-/raw/master-jetpack-compose/Files/result.png" width="246" height="438">  |  <img src="https://gitlab.com/aman043358sagar/Quiz-App/-/raw/master-jetpack-compose/Files/result%20black.png" width="246" height="438">
