@@ -1,82 +1,49 @@
 package com.example.quizapp.activity
 
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
+import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
+import androidx.compose.material3.Surface
 import android.os.Bundle
-import androidx.core.content.ContextCompat
-import com.example.quizapp.R
-import com.example.quizapp.constant.QuestionList
-import com.example.quizapp.databinding.ActivityMainBinding
-import com.example.quizapp.model.Question
-import com.example.quizapp.fragment.MainFragment
+import androidx.compose.material3.Text
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.NavHostController
+import androidx.navigation.compose.rememberNavController
+import com.example.quizapp.activity.nav.SetUpNavGraph
+import com.example.quizapp.activity.ui.theme.QuizAppTheme
 
-class MainActivity : AppCompatActivity() {
-
-    lateinit var binding:ActivityMainBinding
-    var counter = 0
-    lateinit var questionList: ArrayList<Question>
+class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
-        window.statusBarColor = ContextCompat.getColor(this, R.color.statusBar)
-        questionList = QuestionList.questionList
-        if (savedInstanceState == null) {
-            supportFragmentManager.beginTransaction()
-                .replace(R.id.container, MainFragment.newInstance())
-                .commitNow()
-        }
 
+        lateinit var navController: NavHostController
 
-        if (savedInstanceState == null) {
-            updateCounterUI()
-            val fragment = MainFragment.newInstance()
-            val bundle = Bundle()
-            bundle.putSerializable("question", questionList[counter])
-            fragment.arguments = bundle
-            supportFragmentManager.beginTransaction()
-                .replace(R.id.container, fragment)
-                .commitNow()
-        }
-        updateCounterUI()
-        binding.btnNext.setOnClickListener {
-            if (counter<questionList.size-1) {
-                counter++
-                updateCounterUI()
-                val question = questionList[counter]
-                val fragment = MainFragment.newInstance()
-                val bundle = Bundle()
-                bundle.putSerializable("question", question)
-                fragment.arguments = bundle
-                supportFragmentManager.beginTransaction()
-                    .setCustomAnimations(
-                        R.anim.slide_in_right,  // enter
-                        R.anim.slide_out_left,  // exit
-                        R.anim.slide_in_left,   // popEnter
-                        R.anim.slide_out_right  // popExit
-                    )
-                    .replace(R.id.container, fragment)
-                    .addToBackStack(null)
-                    .commit()
-            }else{
-                startActivity(Intent(this@MainActivity, ResultActivity::class.java))
-                finish()
+        setContent {
+            QuizAppTheme {
+                // A surface container using the 'background' color from the theme
+                Surface(modifier = Modifier.fillMaxSize(),
+                    color = MaterialTheme.colorScheme.background) {
+
+                    navController = rememberNavController()
+                    SetUpNavGraph(navController = navController)
+
+                }
             }
         }
 
-        binding.btnPrevious.setOnClickListener {
-
-            if (counter>=1) {
-                counter--
-                onBackPressed()
-            }
-            updateCounterUI()
-        }
     }
+}
 
-    private fun updateCounterUI() {
-        val progress = ((counter+1).toFloat() /questionList.size.toFloat())*100
-        binding.progressIndicator.progress = progress.toInt()
-        binding.counterIndicator.text = "${counter+1}/${questionList.size}"
+
+
+
+@Preview(showBackground = true)
+@Composable
+fun DefaultPreview() {
+    QuizAppTheme {
+
     }
 }
